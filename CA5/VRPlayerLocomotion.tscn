@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://VRPlayerLocomotion.gd" type="Script" id=1]
+[ext_resource path="res://VRDebugHUD.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CapsuleShape3D" id=1]
+
+[sub_resource type="CapsuleMesh" id=2]
+
+[node name="VRPlayerLocomotion" type="XROrigin3D"]
+transform = Transform3D( -0.999827, 0, 0.0186215, 0, 1, 0, -0.0186215, 0, -0.999827, 0, 6.28628, 0 )
+world_scale = 1.2
+script = ExtResource( 1 )
+
+[node name="XRCamera3D" type="XRCamera3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-09, -1.44064, -1.1515 )
+fov = 107.368
+
+[node name="VRDebugHUD" parent="." instance=ExtResource( 2 )]
+
+[node name="PlayerBody" type="CharacterBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerBody"]
+transform = Transform3D( 1, 0, 0, 0, -4.37114e-08, -2, 0, 1, -8.74228e-08, 0, -3.27701, 0 )
+shape = SubResource( 1 )
+
+[node name="Body" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, -4.37114e-08, -2, 0, 1, -8.74228e-08, 0, -3.34287, 0 )
+mesh = SubResource( 2 )

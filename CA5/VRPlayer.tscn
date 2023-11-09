@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://VRDebugHUD.gd" type="Script" id=1]
+
+[node name="VRPlayer" type="XROrigin3D"]
+script = ExtResource( 1 )

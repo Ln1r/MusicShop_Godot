@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Music_shop.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Instruments/Harp/HarpMaterial/Harp_Colour.material" type="Material" id=2]
+
+[node name="InteractionPlatform" type="CSGCombiner3D"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.174194, -7.62939e-06, 0.188435 )
+use_collision = true
+
+[node name="Floor" type="CSGBox3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 15.055, 0, 0, 31.581 )
+width = 114.684
+height = 0.540819
+depth = 8.1112
+material = ExtResource( 2 )
+
+[node name="Music_shop" parent="." instance=ExtResource( 1 )]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.682944, -9.4222 )

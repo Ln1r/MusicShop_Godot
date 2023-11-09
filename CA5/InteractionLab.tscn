@@ -1,0 +1,314 @@
+[gd_scene load_steps=57 format=3 uid="uid://k0ssw1dxqbah"]
+
+[ext_resource type="PackedScene" path="res://InteractionPlatform.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://VRPlayerLocomotion.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Instruments/Harp/Harp.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Instruments/Keyboard/keyboard.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Instruments/Flute/flute.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Instruments/Banjo/banjo.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://Instruments/Guitar/guitar.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://Instruments/Trumpet/trumpet.tscn" id="8"]
+[ext_resource type="Script" path="res://Instruments/Banjo/banjoSound.gd" id="9"]
+[ext_resource type="Script" path="res://Instruments/Flute/fluteSound.gd" id="10"]
+[ext_resource type="Script" path="res://Instruments/Trumpet/trumpetSound.gd" id="11"]
+[ext_resource type="Script" path="res://Instruments/Harp/HarpSound.gd" id="12"]
+[ext_resource type="Script" path="res://Instruments/Keyboard/keyboardSound.gd" id="13"]
+[ext_resource type="Script" path="res://Instruments/Guitar/guitarSound.gd" id="14"]
+[ext_resource type="FontFile" uid="uid://bcn5rvq2ryjdf" path="res://Redkost Comic.otf" id="16"]
+[ext_resource type="PackedScene" path="res://BuyButtons/BanjoButton/BanjoButton.tscn" id="17"]
+[ext_resource type="Script" path="res://BuyButtons/BanjoButton/BanjoButton.gd" id="18"]
+[ext_resource type="PackedScene" path="res://BuyButtons/DrumsButton/DrumsButton.tscn" id="19"]
+[ext_resource type="Script" path="res://BuyButtons/DrumsButton/DrumsButton.gd" id="20"]
+[ext_resource type="PackedScene" path="res://BuyButtons/FluteButton/FluteButton.tscn" id="21"]
+[ext_resource type="Script" path="res://BuyButtons/FluteButton/FluteButton.gd" id="22"]
+[ext_resource type="PackedScene" path="res://BuyButtons/GuitarButton/GuitarButton.tscn" id="23"]
+[ext_resource type="Script" path="res://BuyButtons/GuitarButton/GuitarButton.gd" id="24"]
+[ext_resource type="PackedScene" path="res://BuyButtons/KeyboardButton/KeyboardButton.tscn" id="25"]
+[ext_resource type="Script" path="res://BuyButtons/KeyboardButton/KeyboardButton.gd" id="26"]
+[ext_resource type="PackedScene" path="res://BuyButtons/TrumpetButton/TrumpetButton.tscn" id="27"]
+[ext_resource type="Script" path="res://BuyButtons/TrumpetButton/TrumpetButton.gd" id="28"]
+[ext_resource type="PackedScene" path="res://Instruments/Drums/Drums.tscn" id="29"]
+[ext_resource type="Script" path="res://Instruments/Violin/ViolinSound.gd" id="30"]
+[ext_resource type="PackedScene" path="res://Instruments/Violin/violin.tscn" id="31"]
+[ext_resource type="Script" path="res://Instruments/Drums/DrumSound.gd" id="32"]
+[ext_resource type="PackedScene" path="res://BuyButtons/HarpButton/HarpButton.tscn" id="34"]
+[ext_resource type="Script" path="res://BuyButtons/HarpButton/HarpButton.gd" id="35"]
+[ext_resource type="PackedScene" path="res://Decorations/Chair.tscn" id="36"]
+[ext_resource type="PackedScene" path="res://BuyButtons/ViolinButton/ViolinButton.tscn" id="37"]
+[ext_resource type="Script" path="res://BuyButtons/ViolinButton/ViolinButton.gd" id="38"]
+[ext_resource type="PackedScene" path="res://Decorations/signs.tscn" id="39"]
+
+[sub_resource type="BoxShape3D" id="2"]
+
+[sub_resource type="BoxShape3D" id="38"]
+
+[sub_resource type="BoxShape3D" id="37"]
+
+[sub_resource type="BoxShape3D" id="1"]
+
+[sub_resource type="BoxShape3D" id="40"]
+
+[sub_resource type="BoxShape3D" id="3"]
+
+[sub_resource type="BoxShape3D" id="39"]
+
+[sub_resource type="BoxShape3D" id="34"]
+
+[sub_resource type="BoxShape3D" id="41"]
+
+[sub_resource type="BoxShape3D" id="5"]
+
+[sub_resource type="BoxShape3D" id="43"]
+
+[sub_resource type="BoxShape3D" id="4"]
+
+[sub_resource type="BoxShape3D" id="42"]
+
+[sub_resource type="BoxShape3D" id="6"]
+
+[sub_resource type="BoxShape3D" id="44"]
+
+[sub_resource type="BoxShape3D" id="35"]
+
+[sub_resource type="Sky" id="8"]
+
+[sub_resource type="Environment" id="9"]
+background_mode = 2
+sky = SubResource("8")
+
+[sub_resource type="FontFile" id="45"]
+fallbacks = Array[Font]([ExtResource("16")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="InteractionLab" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.59017, 0)
+
+[node name="InteractionPlatform" parent="." instance=ExtResource("1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.174194, -4.09662, -33.238)
+
+[node name="BanjoButton" parent="." instance=ExtResource("17")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9052, -3.86841, 37.5545)
+script = ExtResource("18")
+
+[node name="banjo" parent="BanjoButton" instance=ExtResource("6")]
+transform = Transform3D(-0.999572, 0, 0.0292476, 0, 1, 0, -0.0292476, 0, -0.999572, 9.24511, 0.858547, -6.70028)
+script = ExtResource("9")
+
+[node name="Area3D" type="Area3D" parent="BanjoButton/banjo"]
+transform = Transform3D(0.677656, 0, 0.010665, 0, 1, 0, 0.010665, 0, 1.04183, 5.90294, 0.636324, 0.775764)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BanjoButton/banjo/Area3D"]
+transform = Transform3D(5, 0, 0, 0, 3, 0, 0, 0, 5, 0, 2.82556, 0)
+shape = SubResource("2")
+
+[node name="Area3D" type="Area3D" parent="BanjoButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0160828, 2.2869, -0.109821)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BanjoButton/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.140789)
+shape = SubResource("38")
+
+[node name="HarpButton" parent="." instance=ExtResource("34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.334, -4.14015, -29.8617)
+script = ExtResource("35")
+
+[node name="Area3D" type="Area3D" parent="HarpButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.28182, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HarpButton/Area3D"]
+shape = SubResource("37")
+
+[node name="Harp" parent="HarpButton" instance=ExtResource("3")]
+transform = Transform3D(0.0894162, 0, -0.995994, 0, 1, 0, 0.995994, 0, 0.0894162, 9.09259, 0.495645, 6.5986)
+script = ExtResource("12")
+
+[node name="Area3D" type="Area3D" parent="HarpButton/Harp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, 0.360592, 2.68809, 4.45985)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HarpButton/Harp/Area3D"]
+transform = Transform3D(5, 0, 5.96046e-08, 0, 2, 0, -4.96705e-08, 0, 6, 0, 1.16834, 0)
+shape = SubResource("1")
+
+[node name="FluteButton" parent="." instance=ExtResource("21")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47487, -3.76946, 10.8277)
+script = ExtResource("22")
+
+[node name="Area3D" type="Area3D" parent="FluteButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.54397, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FluteButton/Area3D"]
+shape = SubResource("40")
+
+[node name="flute" parent="FluteButton" instance=ExtResource("5")]
+transform = Transform3D(0.999999, 0, -0.00118682, 0, 1, 0, 0.00118682, 0, 0.999999, 7.52452, 0.325835, -52.5029)
+script = ExtResource("10")
+
+[node name="Area3D" type="Area3D" parent="FluteButton/flute"]
+transform = Transform3D(0.466803, 0, 0.353745, 0, 1, 0, -0.884361, 0, 0.186721, -9.78553, 5.583, 60.9399)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FluteButton/flute/Area3D"]
+transform = Transform3D(5, 0, -2.98023e-07, 0, 1, 0, 2.98023e-07, 0, 5, 0.471468, 0, -0.139317)
+shape = SubResource("3")
+
+[node name="DrumsButton" parent="." instance=ExtResource("19")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2353, -4.05295, -16.0687)
+script = ExtResource("20")
+
+[node name="Area3D" type="Area3D" parent="DrumsButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.23758, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DrumsButton/Area3D"]
+shape = SubResource("39")
+
+[node name="Drums" parent="DrumsButton" instance=ExtResource("29")]
+transform = Transform3D(-1.23014, 0, -2.54728, 0, 2.82876, 0, 2.54728, 0, -1.23014, -2.1542, 0.732275, 9.355)
+script = ExtResource("32")
+
+[node name="Area3D" type="Area3D" parent="DrumsButton/Drums"]
+transform = Transform3D(1, 0, 7.45058e-08, 0, 0.5, 0, -5.96046e-08, 0, 0.4, -0.0622363, 1.18667, 2.00374)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DrumsButton/Drums/Area3D"]
+transform = Transform3D(2, 0, 5.96046e-08, 0, 2, 0, -5.96046e-08, 0, 2, 0, 0, 0)
+shape = SubResource("34")
+
+[node name="GuitarButton" parent="." instance=ExtResource("23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.8892, -3.93849, 35.1962)
+script = ExtResource("24")
+
+[node name="Area3D" type="Area3D" parent="GuitarButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.76693, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GuitarButton/Area3D"]
+shape = SubResource("41")
+
+[node name="guitar" parent="GuitarButton" instance=ExtResource("7")]
+transform = Transform3D(-0.868008, -0.392899, 0.303632, -0.370864, 0.919582, 0.129729, -0.330185, 0, -0.943916, -6.82737, 1.48749, -5.45312)
+script = ExtResource("14")
+
+[node name="Area3D" type="Area3D" parent="GuitarButton/guitar"]
+transform = Transform3D(0.623933, 0.0550823, 0.397196, 0.116457, 0.529871, -0.00717594, -0.33118, 0.0198077, 0.913714, -3.23815, 1.4561, 1.87216)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GuitarButton/guitar/Area3D"]
+transform = Transform3D(3, -1.19209e-07, 1.19209e-07, -3.37786e-09, 5, -2.06244e-08, -5.96046e-08, 0, 4, 0, 0, 0)
+shape = SubResource("5")
+
+[node name="TrumpetButton" parent="." instance=ExtResource("27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.86412, -4.05854, 10.8481)
+script = ExtResource("28")
+
+[node name="Area3D" type="Area3D" parent="TrumpetButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.48578, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TrumpetButton/Area3D"]
+shape = SubResource("43")
+
+[node name="trumpet" parent="TrumpetButton" instance=ExtResource("8")]
+transform = Transform3D(-0.904745, 0, -0.425953, 0, 1, 0, 0.425953, 0, -0.904745, 4.62958, 4.15264, 5.58412)
+script = ExtResource("11")
+
+[node name="Area3D" type="Area3D" parent="TrumpetButton/trumpet"]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 4.80625, 1.14725, -1.41638)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TrumpetButton/trumpet/Area3D"]
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0)
+shape = SubResource("4")
+
+[node name="KeyboardButton" parent="." instance=ExtResource("25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.711, -4.02808, -29.8179)
+script = ExtResource("26")
+
+[node name="Area3D" type="Area3D" parent="KeyboardButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.45106, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KeyboardButton/Area3D"]
+shape = SubResource("42")
+
+[node name="keyboard" parent="KeyboardButton" instance=ExtResource("4")]
+transform = Transform3D(-0.0300675, 0, -0.999548, 0, 1, 0, 0.999548, 0, -0.0300675, -9.4927, 0.570625, 5.42578)
+script = ExtResource("13")
+
+[node name="Area3D" type="Area3D" parent="KeyboardButton/keyboard"]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.63998, 5.88501, -4.36418)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KeyboardButton/keyboard/Area3D"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 6, 0, 0, 0)
+shape = SubResource("6")
+
+[node name="ViolinButton" parent="." instance=ExtResource("37")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8238, -4.02267, -15.5097)
+script = ExtResource("38")
+
+[node name="Area3D" type="Area3D" parent="ViolinButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.77381, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ViolinButton/Area3D"]
+shape = SubResource("44")
+
+[node name="violin" parent="ViolinButton" instance=ExtResource("31")]
+transform = Transform3D(-0.570881, 0, 1.11186, 0, 1.24986, 0, -1.11186, 0, -0.570881, -0.326572, 1.04278, 6.98267)
+script = ExtResource("30")
+
+[node name="Area3D" type="Area3D" parent="ViolinButton/violin"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, 0.18541, 0.548137, 3.17243)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ViolinButton/violin/Area3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 3, 0, 1.90429, 0)
+shape = SubResource("35")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.557137, 0.830421, 0, -0.830421, 0.557137, 0, 42.1111, 54.1424)
+light_color = Color(0.909804, 0.823529, 0.129412, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("9")
+
+[node name="Chair" parent="." instance=ExtResource("36")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.681884, -2.75388, -44.9264)
+
+[node name="Chair2" parent="." instance=ExtResource("36")]
+transform = Transform3D(-9.77213e-08, 0, 1.11463, 0, 1, 0, -3.41105, 0, -7.43392e-08, -16.5033, -2.86623, 46.178)
+
+[node name="Chair3" parent="." instance=ExtResource("36")]
+transform = Transform3D(4.06764e-08, 0, -1.11463, 0, 1, 0, 3.41105, 0, 1.32918e-08, 14.1991, -2.90214, 46.7389)
+
+[node name="signs" parent="." instance=ExtResource("39")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.30733, -42.6501)
+
+[node name="VRPlayerLocomotion" parent="." instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.561083, 1.9052, 45.3771)
+
+[node name="HUD" type="Label" parent="VRPlayerLocomotion"]
+offset_right = 472.0
+offset_bottom = 120.0
+theme_override_fonts/font = SubResource("45")
+text = "COST:"
+
+[connection signal="body_entered" from="BanjoButton/banjo/Area3D" to="BanjoButton/banjo" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="BanjoButton/banjo/Area3D" to="BanjoButton/banjo" method="_on_Area_body_exited"]
+[connection signal="body_entered" from="BanjoButton/Area3D" to="BanjoButton" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="HarpButton/Area3D" to="HarpButton" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="HarpButton/Harp/Area3D" to="HarpButton/Harp" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="HarpButton/Harp/Area3D" to="HarpButton/Harp" method="_on_Area_body_exited"]
+[connection signal="body_entered" from="FluteButton/Area3D" to="FluteButton" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="FluteButton/flute/Area3D" to="FluteButton/flute" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="FluteButton/flute/Area3D" to="FluteButton/flute" method="_on_Area_body_exited"]
+[connection signal="body_entered" from="DrumsButton/Area3D" to="DrumsButton" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="DrumsButton/Drums/Area3D" to="DrumsButton/Drums" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="DrumsButton/Drums/Area3D" to="DrumsButton/Drums" method="_on_Area_body_exited"]
+[connection signal="body_entered" from="GuitarButton/Area3D" to="GuitarButton" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="GuitarButton/guitar/Area3D" to="GuitarButton/guitar" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="GuitarButton/guitar/Area3D" to="GuitarButton/guitar" method="_on_Area_body_exited"]
+[connection signal="body_entered" from="TrumpetButton/Area3D" to="TrumpetButton" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="TrumpetButton/trumpet/Area3D" to="TrumpetButton/trumpet" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="TrumpetButton/trumpet/Area3D" to="TrumpetButton/trumpet" method="_on_Area_body_exited"]
+[connection signal="body_entered" from="KeyboardButton/Area3D" to="KeyboardButton" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="KeyboardButton/keyboard/Area3D" to="KeyboardButton/keyboard" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="KeyboardButton/keyboard/Area3D" to="KeyboardButton/keyboard" method="_on_Area_body_exited"]
+[connection signal="body_entered" from="ViolinButton/Area3D" to="ViolinButton" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="ViolinButton/violin/Area3D" to="ViolinButton/violin" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="ViolinButton/violin/Area3D" to="ViolinButton/violin" method="_on_Area_body_exited"]
