@@ -7,3 +7,5 @@ Room and Instruments made in Blender.
 Lighting, hitboxes and movement coding completed and executed in Godot.
 
 As one gets into a certain region of each instrument an audio would play for that corresponding instrument.
+
+Read GroupM.pdf for step by step build process
